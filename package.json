@@ -1,7 +1,6 @@
 {
   "name": "Blue-Ridge-Parkway-Closures",
   "version": "0.1.0",
-  "homepage": "https://jeffbliss.github.io/Blue-Ridge-Parkway-Closures",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.6",
@@ -20,7 +19,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "aws s3 sync ./build s3://brp-closures-frontend",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
